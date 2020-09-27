@@ -1,18 +1,25 @@
-.container{
+body{
+    background-color: black;
+
+}
+
+.time-container{
     height: 500px;
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #display{
     width: 100%;
     text-align: center;
-    font-size: xx-large;
+    font-family: Orbitron;
+    font-size: 200px;
+    color:gold;
 }
 .buttons{
     text-align: center;
     
 }
 button{
-    background-color: brown;
-    color:white;
+    background-color: gold;
+    color: black;
+    font-family: Orbitron;
 }
