@@ -1,8 +1,11 @@
 let seconds = 0;
 let minutes = 10;
+let homeScore = 0;
+let awayScore = 0;
 
 var interval = null;
 var clockStatus = "stopped";
+
 function clock(){
     seconds --;
     if (seconds < 0){
@@ -37,4 +40,13 @@ function startButton(){
         window.clearInterval(interval);
         clockStatus = "stopped";
     }
+}
+
+function addHomePoints(){
+    homeScore ++;
+    document.getElementById("homeScore").innerHTML = homeScore;
+}
+function addAwayPoints(){
+    awayScore ++;
+    document.getElementById("awayScore").innerHTML = awayScore;
 }
