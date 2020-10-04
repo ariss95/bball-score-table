@@ -4,17 +4,24 @@ body{
 }
 
 .time-container{
-    height: 500px;
+    height: 100%;
     width: 100%;
+}
+.period-counter{
+    font-family: fantasy;
+    font-size: 5vw;
+    color: white;
+    text-align: center;
 }
 .score-container{
-    height: 300px;
+    height: 100%;
     width: 100%;
-    color: blanchedalmond;
-    font-size: 150px;
+    color: white;
+    font-size: 9vw;
+    font-family: fantasy;
 }
 p{
-    font-size: 50px;
+    font-size: 4vw;
 }
 #home-team{
     float: left;
@@ -28,7 +35,7 @@ p{
     width: 100%;
     text-align: center;
     font-family: Orbitron;
-    font-size: 200px;
+    font-size: 10vw    ;
     color:gold;
 }
 .buttons{
@@ -39,4 +46,10 @@ button{
     background-color: gold;
     color: black;
     font-family: Orbitron;
+}
+#awayAddButton{
+    display: block;
+}
+#homeAddButton{
+    display: block;
 }
