@@ -17,23 +17,42 @@
             <button id = "start" onclick="startButton()">START</button>
         </div>
     </div>
-    <br>
-    <div class="period-counter">PERIOD:
-        <span  id="period">1</span>
+    <div class="quarter-counter">QUARTER:
+        <span  id="quarter">1</span>
         <br>
         <span id="final-score"></span>
     </div>
+    <br>
     <div class="score-container">
         <div id="home-team">
             <p> HOME</p>
             <span id="homeScore">0</span>
-            <button id="homeAddButton" onclick="addHomePoints()"> + </button>
         </div>
+       
         <div id="away-team">
             <p>AWAY</p>
             <span id="awayScore">0</span>
-            <button id="awayAddButton" onclick="addAwayPoints()"> + </button>
+            
         </div>
+    </div>
+    <div id="add-buttons">
+        <button id="homeAddButton" onclick="addHomePoints()"> + </button>
+        <button id="awayAddButton" onclick="addAwayPoints()"> + </button>
+    </div>
+
+    <div class="fouls-container">
+        <div id="fouls-home">
+            <p>FOULS</p>
+            <span id="homeFouls">0</span>
+        </div>
+        <div id="fouls-away">
+            <p>FOULS</p>
+            <span id="awayFouls">0</span>
+        </div>
+    </div>
+    <div id="foul-buttons">
+        <button id="homeFoulsButton" onclick="addHomeFouls()"> + </button>
+        <button id="awayFoulsButton" onclick="addAwayFouls()"> + </button>
     </div>
 </body>
 </html>

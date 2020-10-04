@@ -7,49 +7,67 @@ body{
     height: 100%;
     width: 100%;
 }
-.period-counter{
+.quarter-counter{
     font-family: fantasy;
     font-size: 5vw;
     color: white;
     text-align: center;
 }
 .score-container{
+    display: flex;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
     color: white;
     font-size: 9vw;
     font-family: fantasy;
 }
+
 p{
     font-size: 4vw;
+    margin: 0 auto;
 }
 #home-team{
-    float: left;
-    text-align: center;
+    display: flex;
+    flex-flow: column;
 }
 #away-team{
-    float: right;
-    text-align: center;
+    display: flex;
+    flex-flow: column;
+    text-align: right;
 }
 #display{
     width: 100%;
     text-align: center;
     font-family: Orbitron;
-    font-size: 10vw    ;
+    font-size: 10vw;
     color:gold;
 }
 .buttons{
     text-align: center;
     
 }
+.score-container button{
+    width: 30px;
+}
+#add-buttons{
+    display: flex;
+    justify-content: space-between;
+}
 button{
     background-color: gold;
     color: black;
     font-family: Orbitron;
 }
-#awayAddButton{
-    display: block;
+.fouls-container{
+    display: flex;
+    color:gold;
+    font-family: fantasy;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 4vw;
 }
-#homeAddButton{
-    display: block;
+#foul-buttons{
+    display: flex;
+    justify-content: space-around;
 }

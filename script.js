@@ -2,7 +2,7 @@ let seconds = 0;
 let minutes = 10;
 let homeScore = 0;
 let awayScore = 0;
-let period = 1;
+let quarter = 1;
 
 var interval = null;
 var clockStatus = "stopped";
@@ -15,14 +15,14 @@ function clock(){
     }
     if (seconds===0 && minutes===0){
         startButton();
-        if (period < 4){
+        if (quarter < 4){
             minutes = 10;
-            period ++;
-            document.getElementById("period").innerHTML = period;
-        }else if (period >= 4 && homeScore === awayScore){
+            quarter ++;
+            document.getElementById("quarter").innerHTML = quarter;
+        }else if (quarter >= 4 && homeScore === awayScore){
             minutes = 5;
-            period ++;
-            document.getElementById("period").innerHTML = "OT" + (period - 4).toString();
+            quarter ++;
+            document.getElementById("quarter").innerHTML = "OT" + (quarter - 4).toString();
         }else{
             document.getElementById("start").style.display = "none";
             document.getElementById("final-score").innerHTML = "FINAL SCORE:";
