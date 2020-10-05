@@ -3,6 +3,8 @@ let minutes = 10;
 let homeScore = 0;
 let awayScore = 0;
 let quarter = 1;
+let homeFouls = 0;
+let awayFouls = 0;
 
 var interval = null;
 var clockStatus = "stopped";
@@ -15,6 +17,7 @@ function clock(){
     }
     if (seconds===0 && minutes===0){
         startButton();
+        clearFouls();
         if (quarter < 4){
             minutes = 10;
             quarter ++;
@@ -30,7 +33,7 @@ function clock(){
         
         
         
-        }
+    }
     outputSeconds = seconds;
     outputMinutes = minutes;
 
@@ -56,6 +59,15 @@ function startButton(){
         clockStatus = "stopped";
     }
 }
+function clearFouls(){
+    homeFouls = 0;
+    awayFouls = 0;
+    document.getElementById("homeFouls").style.animationName = "none";
+    document.getElementById("awayFouls").style.animationName = "none";
+    document.getElementById("homeFouls").innerHTML = homeFouls;
+    document.getElementById("awayFouls").innerHTML = homeFouls;
+
+}
 
 function addHomePoints(){
     homeScore ++;
@@ -64,4 +76,26 @@ function addHomePoints(){
 function addAwayPoints(){
     awayScore ++;
     document.getElementById("awayScore").innerHTML = awayScore;
+}
+
+function addHomeFouls(){
+    homeFouls++;
+    if (homeFouls > 4){
+        document.getElementById("homeFouls").style.animationName = "bonus";
+        document.getElementById("homeFouls").style.animationDuration = "3s";
+        document.getElementById("homeFouls").style.animationIterationCount ="infinite";
+    }
+    if (homeFouls === 0) {
+        document.getElementById("homeFouls").style.animationName = "none";        
+    }
+    document.getElementById("homeFouls").innerHTML = homeFouls;
+}
+function addAwayFouls(){
+    awayFouls++;
+    if (awayFouls > 4){
+        document.getElementById("awayFouls").style.animationName = "bonus";
+        document.getElementById("awayFouls").style.animationDuration = "3s";
+        document.getElementById("awayFouls").style.animationIterationCount ="infinite";
+    }
+    document.getElementById("awayFouls").innerHTML = awayFouls;
 }

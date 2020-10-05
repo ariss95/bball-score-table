@@ -2,7 +2,10 @@ body{
     background-color: black;
 
 }
-
+@keyframes bonus{
+    from {color: gold;}
+    to {color: black;}
+}
 .time-container{
     height: 100%;
     width: 100%;
@@ -49,6 +52,13 @@ p{
 }
 .score-container button{
     width: 30px;
+}
+.bonus-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 5px;
+    font-family: fantasy;
+    height: 20%;
 }
 #add-buttons{
     display: flex;
