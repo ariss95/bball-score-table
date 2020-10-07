@@ -1,6 +1,10 @@
 body{
     background-color: black;
+    margin: 0;
 
+}
+#show-navbar{
+    position: relative;
 }
 @keyframes bonus{
     from {color: gold;}
@@ -43,7 +47,7 @@ p{
     width: 100%;
     text-align: center;
     font-family: Orbitron;
-    font-size: 10vw;
+    font-size: 9vw;
     color:gold;
 }
 .buttons{
@@ -64,7 +68,7 @@ p{
     display: flex;
     justify-content: space-between;
 }
-button{
+body button{
     background-color: gold;
     color: black;
     font-family: Orbitron;
@@ -80,4 +84,36 @@ button{
 #foul-buttons{
     display: flex;
     justify-content: space-around;
+}
+#table-container{
+    margin:  5px 10px;
+}
+header button{
+    background-color: orange;
+    color: white;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    background-image: url("favicon.ico");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+    border-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border: orange;
+}
+ul{
+    display: none;
+    list-style-type: none;
+    background-color: orange;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+li{
+    float: left;
+    padding: 1px 5px;
 }
