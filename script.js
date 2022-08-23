@@ -51,7 +51,7 @@ function clock(){
 function startButton(){
     if(clockStatus === "stopped"){
         document.getElementById("start").innerHTML = "STOP";
-        interval = window.setInterval(clock, 1);
+        interval = window.setInterval(clock, 1000);
         clockStatus = "running";
     }else{
         document.getElementById("start").innerHTML = "START";
